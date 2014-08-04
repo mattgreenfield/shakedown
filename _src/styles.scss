@@ -13,6 +13,15 @@ $grey: #999;
   margin: auto;
 }
 
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4 {
+  @extend p;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
 /* ====  //
 // GRID  //
 // ====  */
