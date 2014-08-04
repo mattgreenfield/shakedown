@@ -13,58 +13,69 @@ $grey: #999;
   margin: auto;
 }
 
+
+/* ====  //
+// TEXT  //
+// ====  */
 p {
   font-family: 'Open Sans', sans-serif;
 }
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   @extend p;
   font-weight: 700;
   line-height: 1.8;
 }
 
+
 /* ====  //
 // GRID  //
 // ====  */
-%grid-item {
+.half, .third  {
   float: left;
   padding: 10px;
+  width: 100%;
 }
 .row {
   clear: both;
 }
-.half {
-  width: 50%;
-  @extend %grid-item;
+@media (min-width: 600px) {
+  .half {
+    width: 50%;
+  }
+  .third {
+    width: 33%;
+  }
 }
-.third {
-  width: 33%;
-  @extend %grid-item;
-}
-
-body {
-  padding-top: 70px;
-}
-footer {
-  padding: 30px 0;
-}
-
 
 
 
 .logo {
 	display:block;
-	margin:-30px auto 20px auto;
+	margin: 20px auto;
 	width: 300px;
+  max-width: 100%;
 }
 
 .box {
-	padding: 20px;
-	margin: 20px 0px;
+  padding: 10px;
 	height:250px;
   box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  background-color: $grey;
+}
+.third:nth-of-type(odd) .box {
+  background-color: $pink;
 }
 
-
+.artists,
+.quotes {
+  li {
+    list-style-type: none;
+    display: inline-block;
+  }
+}
+.social {
+  padding: 20px;
+}
 
 /* ================  //
 // RESPONSIVE VIDEO  //
