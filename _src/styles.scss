@@ -16,19 +16,20 @@ $grey: #999;
 /* ====  //
 // GRID  //
 // ====  */
-%float {
-  float: left
+%grid-item {
+  float: left;
+  padding: 10px;
 }
 .row {
   clear: both;
 }
 .half {
   width: 50%;
-  @extend %float;
+  @extend %grid-item;
 }
 .third {
   width: 33%;
-  @extend %float;
+  @extend %grid-item;
 }
 
 body {

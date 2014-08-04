@@ -12,7 +12,8 @@
 // GRID  //
 // ====  */
 .half, .third {
-  float: left; }
+  float: left;
+  padding: 10px; }
 
 .row {
   clear: both; }
