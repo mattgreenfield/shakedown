@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .box {
   padding: 10px;
-	height:300px;
+	height:350px;
   box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
   background-color: $grey;
 }
@@ -84,11 +84,20 @@ h1, h2, h3, h4, h5, h6 {
   background-color: $pink;
 }
 
-.artists,
+%inline-list {
+  list-style-type: none;
+  display: inline-block;
+}
+.artists {
+  li {
+    @extend %inline-list;
+  }
+}
 .quotes {
   li {
-    list-style-type: none;
-    display: inline-block;
+    @extend %inline-list;
+    margin: 10px 0px;
+    text-align: center;
   }
 }
 .social {
