@@ -48,13 +48,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-.logo {
-	display:block;
-	margin: 20px auto;
-	width: 300px;
-  max-width: 100%;
+.home {
+  height: 100vh;
+  padding-top: 25vh;
+  a {
+    text-decoration: none;
+  }
 }
+.home__logo {
+  max-width: 320px;
+  margin: auto;
+  text-align: center;
+  color: $grey;
+  &:hover {
+    color: $pink;
+  }
+
+  img {
+    max-width: 100%;
+    animation:spin 4s linear infinite;
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+}
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 .box {
   padding: 10px;
