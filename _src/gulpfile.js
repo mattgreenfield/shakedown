@@ -13,7 +13,7 @@ gulp.task('default', function() {
 gulp.task('sass', function () {
     gulp.src('*.scss')
         .pipe(sass())
-        .pipe(prefix(["last 1 version", "> 1%", "ie 8", "ie 7"]))
+        .pipe(prefix(["last 2 versions", "> 1%", "ie 8", "ie 7"]))
         .pipe(minifyCSS())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('../'));
