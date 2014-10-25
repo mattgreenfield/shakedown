@@ -5,10 +5,6 @@ var rename = require('gulp-rename');
 var prefix = require('gulp-autoprefixer');
 
 
-gulp.task('default', function() {
-  // place code for your default task here
-});
-
 
 gulp.task('sass', function () {
     gulp.src('*.scss')
@@ -16,7 +12,7 @@ gulp.task('sass', function () {
         .pipe(prefix(["last 2 versions", "> 1%", "ie 8", "ie 7"]))
         .pipe(minifyCSS())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('../'));
+        .pipe(gulp.dest('../assets/css/'));
 });
 
 
