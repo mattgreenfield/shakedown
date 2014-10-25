@@ -154,24 +154,28 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-%inline-list {
-  list-style-type: none;
-  display: inline-block;
+%bare-list {
+	margin: 0;
+	padding: 0;
+	li {
+		list-style-type: none;
+	}
 }
+
 .artists {
-  li {
-	@extend %inline-list;
-  }
+	@extend %bare-list;
 }
+
 .quotes {
-  li {
-	@extend %inline-list;
-	margin: 10px 0px;
-	text-align: center;
-  }
+	@extend %bare-list;
+	li {
+		margin: 10px 0px;
+		text-align: center;
+	}
 }
+
 .social {
-  padding: 20px;
+	padding: 20px;
 }
 
 
