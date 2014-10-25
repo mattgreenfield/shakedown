@@ -21,10 +21,12 @@ $grey: #999;
 
 @import "bower_components/inuit-layout/objects.layout";
 .one-half { width: 50%; }
+.one-quarter {	width: 25%; }
 .one-third { width: 33%; }
 .two-thirds { width: 66%; }
 @media (max-width: 600px) {
   	.one-half { width: 100%; }
+  	.one-quarter { width: 100%; }
 	.one-third { width: 100%; }
 	.two-thirds { width: 100%; }
 }
