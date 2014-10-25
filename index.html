@@ -25,7 +25,15 @@
   <body>
 	<div class="home" id="home">
 	  <div class="home__logo">
-	  	<div class="music-player"></div>
+
+	  	<div class="music-player">
+			<audio controls="controls">
+				 <source src="track.ogg" type="audio/ogg" /> <!-- OGG is required for firefox -->
+				 <source src="music/song.mp3" type="audio/mpeg" />
+				Your browser does not support the audio element.
+			</audio>
+	  	</div>
+
 		<img  src="img/Logo.png" alt="The Shakedown Collective - Logo" />
 		<h3 class="home__enter-text">ENTER SITE</h3>
 	  </div>
