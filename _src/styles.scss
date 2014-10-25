@@ -39,6 +39,11 @@ $grey: #999;
 // ========== //
 
 @import "sass-imports/icon-font";
+.i {
+	display: block;
+	text-align: right;
+	font-size: 43px;
+}
 
 
 
@@ -107,7 +112,11 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes spin { 100% { transform:rotate(360deg); } }
 
 
-
+.home__arrow-down {
+	text-align: center;
+	font-size: 80px;
+	margin-top: 40px;
+}
 
 
 // ============== //
