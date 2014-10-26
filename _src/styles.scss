@@ -34,6 +34,13 @@ $grey: #999;
 @import "bower_components/inuit-clearfix/trumps.clearfix";
 
 
+// ======== //
+// Magnifico  //
+// ======== //
+@import "bower_components/magnific-popup/src/css/settings";
+@import "bower_components/magnific-popup/src/css/main";
+
+
 // ========== //
 // MY STYLING //
 // ========== //
@@ -241,7 +248,7 @@ h1, h2, h3, h4, h5, h6 {
 	right: 10px;
 	height:50px;
 	width:300px;
-	background-color: #C8C8C8;
+	// background-color: #C8C8C8;
 	z-index: 1;
 
 	audio {

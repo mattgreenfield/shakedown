@@ -98,13 +98,37 @@
 		  --><div class="layout__item one-third">
 		  	<div class="module">
 		  		<h3>Gallery</h3>
-		  		<div class="layout">
-		  			<div class="layout__item one-half"><img src="assets/img/gallery/dan.jpg"></div><!--
-		  			--><div class="layout__item one-half"><img src="assets/img/gallery/glenn.jpg"></div><!--
-		  			--><div class="layout__item one-half"><img src="assets/img/gallery/all.jpg"></div><!--
-		  			--><div class="layout__item one-half"><img src="assets/img/gallery/tommy.jpg"></div><!--
-		  			--><div class="layout__item one-half"><img src="assets/img/gallery/matt.jpg"></div><!--
-		  			--><div class="layout__item one-half"><img src="assets/img/gallery/fans.jpg"></div>
+		  		<div class="layout gallery">
+		  			<div class="layout__item one-half">
+		  				<a href="assets/img/gallery/dan.jpg">
+			  				<img src="assets/img/gallery/dan.jpg">
+		  				</a>
+		  			</div><!--
+		  			--><div class="layout__item one-half">
+		  				<a href="assets/img/gallery/glenn.jpg">
+			  				<img src="assets/img/gallery/glenn.jpg">
+		  				</a>
+		  			</div><!--
+		  			--><div class="layout__item one-half">
+		  				<a href="assets/img/gallery/all.jpg">
+			  				<img src="assets/img/gallery/all.jpg">
+		  				</a>
+		  			</div><!--
+		  			--><div class="layout__item one-half">
+		  				<a href="assets/img/gallery/tommy.jpg">
+			  				<img src="assets/img/gallery/tommy.jpg">
+		  				</a>
+		  			</div><!--
+		  			--><div class="layout__item one-half">
+		  				<a href="assets/img/gallery/matt.jpg">
+			  				<img src="assets/img/gallery/matt.jpg">
+		  				</a>
+		  			</div><!--
+		  			--><div class="layout__item one-half">
+		  				<a href="assets/img/gallery/fans.jpg">
+			  				<img src="assets/img/gallery/fans.jpg">
+		  				</a>
+		  			</div>
 		  		</div>
 		  		<span class="i i-pictures"></span>
 		  	</div>
@@ -136,11 +160,26 @@
 	<!-- jQuery -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
+	<!-- Magnific Popup -->
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+
 	<script type="text/javascript">
+
+		// Gallery Magnific Popup
+		$(document).ready(function() {
+			$('.gallery').magnificPopup({
+				delegate: 'a', // child items selector, by clicking on it popup will open
+				type: 'image',
+				gallery: {
+					enabled: true
+				},
+			});
+		});
+
 
 		// Animated divs in to view
 		// http://css-tricks.com/slide-in-as-you-scroll-down-boxes/
-		 (function($) {
+		(function($) {
 
 			/**
 			 * Copyright 2012, Digital Fusion
@@ -171,13 +210,13 @@
 		 })(jQuery);
 
 		var mods = $(".module").addClass(function () {
-		    return $(this).visible(true) && "already-visible";
+			return $(this).visible(true) && "already-visible";
 		});
 
 		$(window).on("scroll", function () {
-		  mods.each(function () {
-		    $(this).toggleClass("come-in", $(this).visible(true));
-		  });
+			mods.each(function () {
+				$(this).toggleClass("come-in", $(this).visible(true));
+			});
 		});
 
 
