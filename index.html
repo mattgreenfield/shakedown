@@ -137,7 +137,9 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 	<script type="text/javascript">
-	// http://css-tricks.com/slide-in-as-you-scroll-down-boxes/
+
+		// Animated divs in to view
+		// http://css-tricks.com/slide-in-as-you-scroll-down-boxes/
 		 (function($) {
 
 			/**
@@ -178,16 +180,23 @@
 		  });
 		});
 
-		 // $(window).scroll(function(event) {
-		 // 	// console.log ('scrollinngn');
-		 //   $(".module").each(function(i, el) {
-		 //     var el = $(el);
-		 //     if (el.visible(true)) {
-		 //       el.addClass("come-in");
-		 //     }
-		 //   });
 
-		 // });
+
+		// Scrolling Page Anchors
+		$('a[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+		        || location.hostname == this.hostname) {
+
+		        var target = $(this.hash);
+		        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		           if (target.length) {
+		             $('html,body').animate({
+		                 scrollTop: target.offset().top
+		            }, 1000);
+		            return false;
+		        }
+		    }
+		});
 	</script>
 
   </body>
