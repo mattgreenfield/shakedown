@@ -234,6 +234,16 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+@media (min-width: 600px) {
+   #gallery {
+   	float: none;
+   }
+}
+
+.sampleClass {float:left;}
+@media only screen and (max-width: 800px){
+	.sampleClass {float:none;}
+}
 
 
 

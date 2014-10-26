@@ -45,7 +45,7 @@
 		<div class="layout__item two-thirds">
 			<div class="module">
 				<div class="video-container">
-					<iframe width="560" height="315" src="//www.youtube.com/embed/W_kfDO8Qt6w?rel=0" frameborder="0" allowfullscreen></iframe>
+					<iframe width="960" height="720" src="//www.youtube.com/embed/OvCz483QB_Q" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
 		</div><!--
@@ -95,10 +95,10 @@
 			</div>
 		</div><!--
 
-		  --><div class="layout__item one-third">
-		  	<div class="module">
+		  --><div class="layout__item one-third" id="gallery">
+		  	<div class="module" >
 		  		<h3>Gallery</h3>
-		  		<div class="layout gallery">
+		  		<div class="layout">
 		  			<div class="layout__item one-half">
 		  				<a href="assets/img/gallery/dan.jpg">
 			  				<img src="assets/img/gallery/dan.jpg">
@@ -132,20 +132,19 @@
 		  		</div>
 		  		<span class="i i-pictures"></span>
 		  	</div>
-		  </div><!--
+		  </div>
 
-	NEW ROW
 
-		--><div class="layout__item one-whole">
+<!-- 		  <div class="layout__item one-whole">
 		  	<div class="module">
 		  		<h3>Videos</h3>
 		  		<div class="layout">
-		  			<div class="layout__item one-quarter">VIDEO</div><!--
-		  			--><div class="layout__item one-quarter">VIDEO</div>
+		  			<div class="layout__item one-quarter">VIDEO</div>
+		  			<div class="layout__item one-quarter">VIDEO</div>
 		  		</div>
 		  		<span class="i i-video"></span>
 		  	</div>
-		  </div>
+		  </div> -->
 
 
 	</div><!-- end layout-->
@@ -165,14 +164,16 @@
 
 	<script type="text/javascript">
 
+
 		// Gallery Magnific Popup
 		$(document).ready(function() {
-			$('.gallery').magnificPopup({
+			$('#gallery').magnificPopup({
 				delegate: 'a', // child items selector, by clicking on it popup will open
 				type: 'image',
 				gallery: {
 					enabled: true
 				},
+				disableOn: 600,
 			});
 		});
 
