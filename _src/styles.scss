@@ -239,6 +239,12 @@ h1, h2, h3, h4, h5, h6 {
    	float: none;
    }
 }
+#gallery {
+	.layout__item {
+		width: 50%;
+		padding-bottom: 24px;
+	}
+}
 
 .sampleClass {float:left;}
 @media only screen and (max-width: 800px){
